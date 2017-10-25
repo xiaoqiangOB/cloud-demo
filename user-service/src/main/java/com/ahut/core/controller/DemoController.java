@@ -26,7 +26,7 @@ public class DemoController {
      */
     @RequestMapping(value = "/stu",method = RequestMethod.POST)
     public String learn(@RequestBody DemoReq request) throws Exception{
-        DemoRes response = demoService.getStudent(request);
+        DemoRes response = demoService.getByTest(request);
         return Packet.setResponse(response);
     }
 }

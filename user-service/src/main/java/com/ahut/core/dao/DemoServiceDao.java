@@ -1,10 +1,11 @@
 package com.ahut.core.dao;
 
-import org.springframework.stereotype.Repository;
+import com.ahut.core.common.db.dao.BaseDao;
+import com.ahut.core.dao.entity.Demo;
 
 /**
  * Created by c2292 on 2017/10/23.
  */
-@Repository("demoInfoDao")
-public interface DemoServiceDao {
+
+public interface DemoServiceDao extends BaseDao<Demo> {
 }

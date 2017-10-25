@@ -18,6 +18,11 @@ public class DemoServiceImpl implements DemoService{
 
     @Override
     public DemoRes getStudent(DemoReq demoReq){
-        return demoBiz.query(demoReq);
+        return null;//demoBiz.query(demoReq);
+    }
+
+    @Override
+    public DemoRes getByTest(DemoReq demoReq) {
+        return demoBiz.getByTest(demoReq);
     }
 }

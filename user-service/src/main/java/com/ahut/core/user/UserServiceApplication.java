@@ -15,8 +15,8 @@ import org.springframework.context.annotation.ComponentScan;
  */
 @EnableDiscoveryClient//激活Eureka中的DiscoveryClient实现，才能实现Controller中对服务信息的输出
 @SpringBootApplication
-@ComponentScan(basePackages = {"com.ahut.core.common.db.config","com.ahut.core.common.exception","com.ahut.core.controller","com.ahut.core.service","com.ahut.core.biz"})//扫描包路径
-@MapperScan(basePackages="com.ahut.core.dao",sqlSessionTemplateRef="sessionTemple")//将接口转换为Spring容器中的Bean
+@ComponentScan(basePackages = {"com.ahut.core.common.db.config","com.ahut.core.common.exception","com.ahut.core.controller","com.ahut.core.service","com.ahut.core.biz","com.ahut.core.dao"})//扫描包路径
+//@MapperScan(basePackages="com.ahut.core.dao",sqlSessionTemplateRef="sessionTemple")//将接口转换为Spring容器中的Bean
 public class UserServiceApplication {
     public static void main(String[] args) {
         new SpringApplicationBuilder(UserServiceApplication.class).web(true).run(args);

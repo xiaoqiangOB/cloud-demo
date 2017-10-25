@@ -9,4 +9,5 @@ import com.ahut.core.dto.demo.DemoRes;
 public interface DemoService {
     DemoRes getStudent(DemoReq demoReq);
 
+    DemoRes getByTest(DemoReq demoReq);
 }
