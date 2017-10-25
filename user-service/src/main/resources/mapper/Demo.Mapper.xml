@@ -6,6 +6,19 @@
     <result column="id" jdbcType="VARCHAR" property="id" />
     <result column="age" jdbcType="INTEGER" property="age" />
   </resultMap>
+
+  <sql id="table">demo</sql>
+
+  <sql id="baseColumnList">
+    name ,age ,id
+  </sql>
+
+  <sql id="condition_sql">
+    <if test="name != null"> and name = #{name,jdbcType=VARCHAR}</if>
+    <if test="age != null"> and age = #{age,jdbcType=VARCHAR}</if>
+    <if test="id != null"> and id = #{id,jdbaType=VARCHAR}</if>
+  </sql>
+
   <insert id="insert" parameterType="com.ahut.core.dao.entity.Demo">
     insert into demo (name, id, age
       )
@@ -51,5 +64,11 @@
       </if>
     </where>
 
+  </select>
+  <select id="listBy" parameterMap="java.util.Map" resultMap="BaseResultMap">
+    SELECT <include refid="baseColumnList"/> from <include refid="table"/>
+    <where>
+      <include refid="condition_sql"/>
+    </where>
   </select>
 </mapper>
