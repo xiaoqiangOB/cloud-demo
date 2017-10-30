@@ -19,36 +19,9 @@ import java.util.Map;
 @Repository("demoBiz")
 public class DemoBiz {
     private static org.slf4j.Logger  LOGGER = org.slf4j.LoggerFactory.getLogger(DemoBiz.class);
-    //@Autowired
-    //DemoMapper demoMapper;
 
     @Autowired
     DemoServiceDao demoServiceDao;
-
-//    public DemoRes query(DemoReq demoReq) {
-//        DemoRes response = new DemoRes();
-//        Demo demo = new Demo();
-//        demo.setName(demoReq.getName());
-//        demo.setAge(demoReq.getAge());
-//        demo.setId(demoReq.getId());
-//
-//        Map<String,String> param = new HashMap<>();
-//        param.put(Demo.NAME,demoReq.getName());
-//        param.put(Demo.AGE,demoReq.getAge());
-//        param.put(Demo.ID,demo.getId());
-//
-//        Demo demoInfo = demoMapper.query(demo);
-//        if (demoInfo == null) {
-//            LOGGER.info("查询为空");
-//            throw new BizException(DemoInfoCode.FAIL.getErrCode(), DemoInfoCode.FAIL.getErrMsg());
-//        }
-//        LOGGER.info("处理应答数据");
-//        response.setName(demoInfo.getName());
-//        response.setAge(demoInfo.getAge());
-//        response.setId(demoInfo.getId());
-//        Packet.setBizSuccess();
-//        return response;
-//    }
 
     public DemoRes getByTest(DemoReq request){
         DemoRes response = new DemoRes();

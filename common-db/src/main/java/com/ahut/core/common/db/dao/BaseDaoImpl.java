@@ -185,7 +185,7 @@ public abstract class BaseDaoImpl<T> implements BaseDao<T>{
 
     @Override
     public List<T> listPage(PageParam pageParam, Map<String, Object> paramMap) {
-        return null;
+        return listPage(pageParam,SQL_LIST_PAGE,paramMap,sessionTemplate);
     }
     /***************************************************dao内部处理***********************/
     protected  int insert(T t,SqlSessionTemplate sqlSessionTemplate){
